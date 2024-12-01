@@ -1,21 +1,20 @@
 package main
 
 import (
+	// STD imports
 	"html/template"
 	"log"
 	"net/http"
 	"fmt"
 	"io"
 	"time"
+
+	// Third party imports
+	"github.com/Tyler-Stocks/Reybots-Website-Test/context/Context"
 )
 
 const STATIC_URL string = "/static/"
 const STATIC_ROOT string = "static/"
-
-type Context struct {
-    Title  string
-    Static string
-}
 
 func Home(writer http.ResponseWriter, request *http.Request) {
 	context := Context{Title: "Home"}
